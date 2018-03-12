@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>设置排课规则</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../common/My97DatePicker/WdatePicker.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<style type="text/css">
+    textarea{height:60px;vertical-align: top;width:500px;}
+    .wx_fenzu_p{margin:10px 0;}
+    .wx_fenzu_p span{padding:2px 10px;margin-right: 10px;display: inline-block;border:1px solid #ccc;cursor: pointer;}
+    .wx_fenzu_p span.active{background: #399fdf;color:#fff;}
+</style>
+
+<body>
+    <iframe src="../header.html" frameborder="0" class="iframheader"></iframe>
+    <div class="indexcon">
+        <div class="fanhui">
+            <a href="../index.html"><img src="../img/fanhui.png" style="vertical-align:middle;margin-right:3px;margin-left:15px;">返回</a>
+        </div>
+        <div class="pkqh_con">
+            <div class="wx_role_ul">
+                <ul>
+                    <li class="active">班级课表</li>
+                </ul>
+            </div>
+            <!--   设置课表       -->
+            <div class="setkebiao" style="padding:0 30px">
+                <div class="set_help">
+                    <button class="wx_settime"><em></em>上课时间设置</button>
+                    <button class="wx_export"><em></em>导出</button>
+                    <button class="wx_print"><em></em>打印</button>
+                    <button class="wx_setprint"><em></em>打印设置</button>
+                </div>
+                <div class="wx_set_guize_ul">
+                    <!--     科目规则     -->
+                    <div>
+                        <ul>
+                            <li><b>课表名称：</b><span>2017-2018学年第一学期课表</span></li>
+                            <li><b>选择年级：</b>
+                                <select name="" id="" class="wx_xuanzenianji selectianshu">
+                                    <option value="">高一</option>
+                                </select>
+                                <select name="" id="" class="wx_xuanzenianji selectianshu" style="margin-left:20px;">
+                                    <option value="">2017-07-08</option>
+                                </select>
+                                <button class="wx_sure_btn" style="margin-left:20px;">查询</button>
+                            </li>
+
+                            <li><b>班级名称：</b>
+                                <span>2017301</span> <span style="margin-left:20px;">班主任：张晓明</span>
+                                <table class="wx_setrenwu_table wx_setkemu_bupai">
+                                    <thead>
+                                        <tr>
+                                            <th>节次</th>
+                                            <th>星期一</th>
+                                            <th>星期二</th>
+                                            <th>星期三</th>
+                                            <th>星期四</th>
+                                            <th>星期五</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="wx_jieci">第一节(08:30-09:10)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wx_jieci">第二节(08:30-09:10)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wx_jieci">第三节(08:30-09:10)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wx_jieci">第四节(08:30-09:10)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </li>
+                            
+                            <li><b>班级名称：</b>
+                                <span>2017301</span> <span style="margin-left:20px;">班主任：张晓明</span>
+                                <table class="wx_setrenwu_table wx_setkemu_bupai">
+                                    <thead>
+                                        <tr>
+                                            <th>节次</th>
+                                            <th>星期一</th>
+                                            <th>星期二</th>
+                                            <th>星期三</th>
+                                            <th>星期四</th>
+                                            <th>星期五</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="wx_jieci">第一节(08:30-09:10)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wx_jieci">第二节(08:30-09:10)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wx_jieci">第三节(08:30-09:10)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wx_jieci">第四节(08:30-09:10)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--打印设置弹窗   -->
+    <div class="wx_tanchuang wx_addfenzutc" style="display:block">
+        <div class="wx_hide"></div>
+        <div class="wx_tanchuangcon wx_fenzu_tc_height">
+            <div class="tc_con_tit"> <span>班级课表</span> <img src="../img/tanchuanshanchu.png" class="img_guanbi"> </div>
+            <div class="tc_con_neirong">
+                <p class="wx_fenzu_p"> 课&nbsp;表&nbsp;名&nbsp;称：
+                    <input type="text" placeholder="请输入名称"> 
+                </p>
+                <p class="wx_fenzu_p"> 底注第一行：
+                    <textarea name="" id="" cols="30" rows="10" placeholder="请输入名字，至少能输入250个字"></textarea>
+                </p>
+                <p class="wx_fenzu_p"> 底注第二行：
+                    <textarea name="" id="" cols="30" rows="10" placeholder="请输入名字，至少能输入250个字"></textarea>
+                </p>
+                <p class="wx_fenzu_p"> 底注第三行：
+                    <textarea name="" id="" cols="30" rows="10" placeholder="请输入名字，至少能输入250个字"></textarea>
+                </p>
+                <p class="wx_fenzu_p"> 打&nbsp;印&nbsp;设&nbsp;置：
+                    <span class="active">一页一表</span><span>一页两表</span>
+                </p>
+
+                <p style="margin-top:20px;text-align:center">
+                    <button class="tc_anniu_queding">确定</button>
+                    <button class="tc_anniu_quxiao">取消</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

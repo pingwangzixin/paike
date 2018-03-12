@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>设置教学任务</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../common/My97DatePicker/WdatePicker.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<style>
+    table tr th {
+        cursor: pointer;
+    }
+
+    table tr td {
+        cursor: pointer;
+        border: 1px solid #e6e6e6;
+    }
+
+    table tr td:hover {
+        background: #e3f1fa;
+    }
+
+    .wx_lanzi2 {
+        color: #399fdf;
+    }
+
+    .wx_lanline2 {
+        background: #e3f1fa;
+    }
+
+    .tdbg {
+        background: #e3f1fa;
+        color: #399fdf;
+    }
+
+    .wx_xiaozu_width span {
+        position: relative;
+    }
+
+    .wx_xiaozu_width span i {
+        display: block;
+        left: 0px;
+        top: -30px;
+        position: absolute;
+        cursor: pointer;
+        padding: 0 12px;
+        background: #09c;
+        color: #fff;
+    }
+
+    .wx_xiaozu_width span i b {
+        width: 30px;
+    }
+</style>
+
+<body>
+    <iframe src="../header.html" frameborder="0" class="iframheader"></iframe>
+    <div class="indexcon">
+        <div class="fanhui">
+            <a href="../index.html"><img src="../img/fanhui.png" style="vertical-align:middle;margin-right:3px;margin-left:15px;">返回</a>
+        </div>
+        <div class="pkqh_con">
+            <!--   切换的列表        -->
+            <div class="qiehu_con_tit">
+                <ul>
+                    <a href="./set_kebiao.html">
+                        <li>设置课表</li>
+                    </a>
+                    <a href="./set_jiaoxuerenwu.html">
+                        <li class="active">设置教学任务</li>
+                    </a>
+                    <a href="./set_paike_role.html">
+                        <li>设置排课规则</li>
+                    </a>
+                    <a href="./set_pre_kebiao.html">
+                        <li>预排课表</li>
+                    </a>
+                    <a href="./zhineng_kebiao.html">
+                        <li>智能编排课表</li>
+                    </a>
+                    <a href="./set_weitiao.html">
+                        <li>微调</li>
+                    </a>
+                </ul>
+            </div>
+            <!--   设置课表       -->
+            <div class="setkebiao">
+                <div class="set_help">
+                    <button class="btnhelp"><em></em>常见问题</button>
+                </div>
+                <ul>
+                    <li><b>课表名称：</b><span>2017-2018学年第一学期课表</span></li>
+                    <li><b>选择年级：</b>
+                        <select name="" id="" class="wx_xuanzenianji selectianshu">
+                            <option value="">高一</option>
+                        </select>
+                    </li>
+                    <li class="wx_fenzu_span">
+                        <b>选择分组：</b>
+                        <div class="wx_xiaozu_width">
+                            <span class="wx_allfz">全部分组</span>
+                            <span>第一小组
+                                <i style="display:none">
+                                    <b class="wx_xz_editor">编辑</b>|<b class="wx_xz_del">删除</b>
+                                </i>
+                            </span>
+                            <span>
+                                第一小组
+                                <i style="display:block">
+                                    <b class="wx_xz_editor">编辑</b>|<b class="wx_xz_del">删除</b>
+                                </i>
+                            </span>
+                            <span>第一小组
+                                <i style="display:none">
+                                    <b class="wx_xz_editor">编辑</b>|<b class="wx_xz_del">删除</b>
+                                </i>
+                            </span>
+                            <span>第一小组
+                                <i style="display:none">
+                                    <b class="wx_xz_editor">编辑</b>|<b class="wx_xz_del">删除</b>
+                                </i>
+                            </span>
+                        </div>
+                        <i class="wx_addfz" style="margin: 8px -3px;"><em class="indexjia"></em>添加分组</i> <img src="../img/wenti.png" title="111111111111" alt="" style="vertical-align:middle;margin-left:5px;">
+                    </li>
+                    <li class="wx_fenzu_span">
+                        <b>选择科目：</b>
+                        <div class="wx_div_width">
+                            <span class="active">语文</span>
+                            <span>数学</span>
+                            <span>音乐</span>
+                            <span>美术</span>
+                            <span>数学</span>
+                            <span>音乐</span>
+                            <span>美术</span>
+                            <span>数学</span>
+                            <span>音乐</span>
+                            <span>美术</span>
+                            <span>数学</span>
+                            <span>音乐</span>
+                            <span>美术</span>
+                        </div>
+
+                    </li>
+                    <li class="wx_setjieshu">
+                        <b>每周上课：</b>
+                        <input type="text" placeholder="请输入节数">节<i class="wx_ml50"></i>其中两节连上
+                        <input type="text" placeholder="自动默认">次
+                        <p class="wx_huizi wx_ml100">（两节连上次数已默认，也可手动修改，如每周上课5天，某科目每周上课6节，则此科目两节连上次数为1；设置单双周课程时需将每周上课节数设为带0.5节的课时，如0.5、1.5、2.5等。）</p>
+                        <button class="wx_sure_btn wx_ml100">确定</button>
+                        <button class="wx_noaccess_btn wx_ml100" disable="true">确定</button>
+                    </li>
+                    <li>
+                        <b>修改教学任务：</b>
+                        <button class="index_hongse wx_qingkong" style="display:none"><em class="index_delet"></em>清空</button>
+                        <table class="wx_setrenwu_table">
+                            <thead>
+                                <tr>
+                                    <th class="selectAll">班级</th>
+                                    <th>语文</th>
+                                    <th>音乐</th>
+                                    <th>美术</th>
+                                    <th>自习</th>
+                                    <th>技术</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="wx_onetd">20173017</td>
+                                    <td>3节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                </tr>
+                                <tr>
+                                    <td class="wx_onetd">20173017</td>
+                                    <td>3节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                </tr>
+                                <tr>
+                                    <td class="wx_onetd">20173017</td>
+                                    <td>3节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                </tr>
+                                <tr>
+                                    <td class="wx_onetd">20173017</td>
+                                    <td>3节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                </tr>
+                                <tr>
+                                    <td class="wx_onetd">20173017</td>
+                                    <td class="yhs">3节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                </tr>
+                                <tr>
+                                    <td class="wx_onetd">20173017</td>
+                                    <td>3节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                    <td>0.5节</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="wx_huizi">（点击内容格可单个修改教学任务或任课教师；点击表头选中行或列，点“清空”按钮可删除）</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 常见问题弹窗   -->
+    <div class="wx_tanchuang" style="display:none;">
+        <div class="wx_hide"></div>
+        <div class="wx_tanchuangcon">
+            <div class="tc_con_tit"> <span>常见问题</span> <img src="../img/tanchuanshanchu.png" class="img_guanbi"> </div>
+            <div class="tc_con_neirong">
+                <ul>
+                    <li>1.为什么在选择科目时，找不到我想设置的科目？是由于基础数据中未添加此科目；需进入基础数据管理——学校功能管理——科目管理页面进行添加，重新登录方可生效。</li>
+                    <li>2.导入任课教师时，如果同一课程有多个任教老师，可以一次性导入吗？可以。在导入表格中，同一课程的任教老师之间用“，”分隔即可。</li>
+                    <li>3.导入任课教师时，若出现字段不匹配该如何处理？是由于导入表格的表头字段与系统字段不匹配。需按提示依次选择Excel表格字段和系统表格字段，点击添加进行匹配；也可通过修改表格字段，使其与系统一致后，重新导入。</li>
+                    <li>4.导入任课教师时，若提示教师不匹配，该如何操作？是由于导入表格的教师信息与系统不匹配。具体操作如下：若已知教师姓名不匹配原因，可直接点击不匹配行编辑修改。若不确定原因，则需导出错误信息备用，进行下一点操作。进入基础数据管理——老师管理页面，查找不匹配教师姓名或姓氏，在查询结果中确认教师未匹配的原因。若姓名错误则对应修改教师姓名；若无此教师，则点击创建老师，新建此教师。按照相同的方法，待所有不匹配教师修改一致后，重新导入即可。</li>
+                    <li>5.导入任课教师后如何修改任课教师及科目课时？点击课时表格中对应单元格，在弹窗中直接修改课时或任课教师；也可选中行/列进行批量清空操作；或重新设置课时/导入任课教师。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 修改任务弹窗   -->
+    <div class="wx_tanchuang" style="display:none">
+        <div class="wx_hide"></div>
+        <div class="wx_tanchuangcon  wx_xgrwtc_height">
+            <div class="tc_con_tit"> <span>修改教学任务</span> <img src="../img/tanchuanshanchu.png" class="img_guanbi"> </div>
+            <div class="tc_con_neirong" style="margin-top:30px;">
+                <div>
+                    <div class="fl"> 周课时
+                        <input type="text"><i class="wx_ml50"></i>连排次数
+                        <input type="text"> </div>
+                    <div class="fr">
+                        <button class="index_hongse wx_qingkong"><em class="index_delet"></em>删除教学任务</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <p style="margin-top:100px;text-align:center">
+                    <button class="tc_anniu_queding">确定</button>
+                    <button class="tc_anniu_quxiao">取消</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--添加分组弹窗   -->
+    <div class="wx_tanchuang wx_addfenzutc" style="display:none">
+        <div class="wx_hide"></div>
+        <div class="wx_tanchuangcon wx_fenzu_tc_height">
+            <div class="tc_con_tit"> <span>添加分组</span> <img src="../img/tanchuanshanchu.png" class="img_guanbi"> </div>
+            <div class="tc_con_neirong" style="margin-top:30px;">
+                <p class="wx_fenzu_p"> 分组名称
+                    <input type="text"> </p>
+                <div class="wx_select_banji_tc">
+                    <p>选择班级</p>
+                    <div class="banji_fenzu_tc">
+                        <p><span class="fl"><input type="checkbox" id="wx_banji_all"><label for="wx_banji_all">全选</label></span><span class="fr"><input type="text" placeholder="请输入班级" class="index_xuenian wx_fenzu_seach"></span></p>
+                        <div class="clear"></div>
+                        <div class="wx_banji_ul">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="banjiid1">
+                                    <label for="banjiid1">(1111111)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid2">
+                                    <label for="banjiid2">(1)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid3">
+                                    <label for="banjiid3">(1)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid4">
+                                    <label for="banjiid4">(1)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid5">
+                                    <label for="banjiid5">(1)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid6">
+                                    <label for="banjiid6">(1)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid7">
+                                    <label for="banjiid7">(1)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid8">
+                                    <label for="banjiid8">(1)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid9">
+                                    <label for="banjiid9">(1)班</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="banjiid10">
+                                    <label for="banjiid10">(1)班</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top:20px;text-align:center">
+                    <button class="tc_anniu_queding">添加</button>
+                    <button class="tc_anniu_quxiao">取消</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 删除提示弹窗   -->
+    <div class="wx_tanchuang wx_delet_tips" style="display:none">
+        <div class="wx_hide"></div>
+        <div class="wx_tanchuangcon  wx_xgrwtc_height">
+            <div class="tc_con_tit"> <span>删除</span> <img src="../img/tanchuanshanchu.png" class="img_guanbi"> </div>
+            <div class="tc_con_neirong" style="margin-top:30px;">
+                <div style="text-align:center"> <em class="wx_erro_icon"></em>
+                    <p style="font-size:16px;">确认要删除吗？</p>
+                </div>
+            </div>
+            <p style="margin-top:20px;text-align:center">
+                <button class="tc_anniu_queding">确定</button>
+                <button class="tc_anniu_quxiao">取消</button>
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {
+        $(document).on("click", "table tr td", function() {
+            if ($(this).hasClass("wx_onetd")) {
+                $("table tbody tr td").removeClass("tdbg");
+                $(this).parent().toggleClass("tdbg");
+                $(this).parent().siblings().removeClass("tdbg");
+                if ($("table tr").hasClass("tdbg") || $("table tr td").hasClass("tdbg")) {
+                    $(".wx_qingkong").show()
+                } else {
+                    $(".wx_qingkong").hide()
+                }
+
+                if ($(".selectAll").hasClass("namejs")) {
+                    $(".selectAll").attr("name", "")
+                }
+            }
+        })
+
+        $(document).on("click", "table thead tr th", function() {
+            //点击全选
+            if ($(this).hasClass("selectAll")) {
+                if ($("table tr").hasClass("tdbg") || $("table tr td").hasClass("tdbg")) {
+                    $(".wx_qingkong").show()
+                } else {
+                    $(".wx_qingkong").hide()
+                }
+                $(this).toggleClass("namejs");
+                if ($("table tr").hasClass("tdbg") || $("table tr td").hasClass("tdbg")) {
+                    $("table tr").removeClass("tdbg");
+                    $("table tr td").removeClass("tdbg");
+                } else {
+                    if ($(this).hasClass("namejs")) {
+                        alert("全选")
+                        $(this).attr("name", "selectquanxuan")
+                    } else {
+                        alert("取消全选")
+                        $(this).attr("name", "")
+                    }
+                }
+            } else {
+
+                if ($(".selectAll").hasClass("namejs")) {
+                    $(".selectAll").attr("name", "")
+                }
+
+                $(".wx_setrenwu_table tr").removeClass("tdbg");
+                var index = $(this).index();
+                $("table tbody tr").each(function() {
+                    $(this).children("td").eq(index).toggleClass("tdbg");
+                    $(this).children('td').eq(index).siblings().removeClass("tdbg")
+                })
+                if ($("table tr td").hasClass("tdbg")) {
+                    $(".wx_qingkong").show()
+                } else {
+                    $(".wx_qingkong").hide()
+                };
+
+            };
+        });
+
+        //删除小组
+        $(document).on("click", ".wx_xiaozu_width span i b.wx_xz_del", function() {
+            $(this).parent().parent().attr()
+        })
+
+        //编辑小组
+        $(document).on("click", ".wx_xiaozu_width span i b.wx_xz_editor", function() {
+            $(this).parent().parent().attr()
+        })
+
+    })
+</script>
+
+</html>
