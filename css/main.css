@@ -631,6 +631,7 @@ body {
     cursor: pointer;
 }
 
+
 /*
 .wx_pdpx {
     margin-left: 103px;
@@ -1030,7 +1031,6 @@ span.wx_hongzi {
 }
 
 td.wx_hongzi {
-
     background: url(../img/bupai.png)no-repeat center;
 }
 
@@ -1481,4 +1481,17 @@ i.wx_delet_icon {
 
 .loading div:nth-child(3) span {
     -webkit-animation-delay: 2s;
+}
+
+.wx_daochu_kuang {
+    width: 288px;
+    padding: 58px 0;
+    text-align: center;
+    background: #f7f7f7;
+    border: 1px solid #f1f1f1;
+}
+
+.wx_daochu_kuang:hover {
+    background: #f0f7fd;
+    border: 1px solid #399fdd;
 }
